@@ -562,6 +562,7 @@ list-style-type: none;
 </li>
 </ul></li>
 </ul></li>
+<li>How do the data types for python map to those for data science</li>
 <li>Operators
 <ul>
 <li>The assignment operator<br />
@@ -574,20 +575,20 @@ list-style-type: none;
 </li>
 <li>Logical operators<br />
 </li>
-<li>Object oriented operator</li>
+<li>Object-oriented operator</li>
 </ul></li>
 </ul>
 </div>
 <div id="learning-objectives" class="slide section level2">
 <h1>Learning Objectives</h1>
 <ul>
-<li>Undertand the core components of programing languages<br />
+<li>Understand the core components of programming languages<br />
 </li>
 <li>Understand the core construct of python<br />
 </li>
 <li>Understand data types in python and be able to name and describe them<br />
 </li>
-<li>Understanding how date types in python map to data types in data science<br />
+<li>Understanding how data types in python map to data types in data science<br />
 </li>
 <li>Understanding operators and operator types<br />
 </li>
@@ -612,16 +613,16 @@ list-style-type: none;
 </li>
 <li>Control structure loops<br />
 </li>
-<li>Functions (in built and user defined)<br />
+<li>Functions (in built and user-defined)<br />
 </li>
-<li>Object oriented programing (OOP)</li>
+<li>Object-oriented programing (OOP)</li>
 </ul></li>
 </ul>
 </div>
 <div id="what-is-python" class="slide section level2">
 <h1>What is Python</h1>
 <ul>
-<li>Object Oriented Language</li>
+<li>Object-oriented Language</li>
 <li>In python (almost) everything is an object<br />
 </li>
 <li>Data types have ‘methods’ that are unique to their type<br />
@@ -664,7 +665,7 @@ list-style-type: none;
 <div id="strings" class="slide section level2">
 <h1>Strings</h1>
 <ul>
-<li>Charachters of any type and any length wraped in quotes that may be single or double</li>
+<li>Characters of any type and any length wrapped in quotes that may be single or double</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello world&quot;</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Hello world&#39;</span>)</span></code></pre></div>
@@ -695,9 +696,9 @@ list-style-type: none;
 <div id="booleans" class="slide section level2">
 <h1>Booleans</h1>
 <ul>
-<li>Fancy name for True or False<br />
+<li>A fancy name for True or False<br />
 </li>
-<li>Notice they are not wraped in quotes. That would make them strings!<br />
+<li>Notice they are not wrapped in quotes. That would make them strings!<br />
 </li>
 <li>Examples - True, False<br />
 </li>
@@ -712,7 +713,7 @@ list-style-type: none;
 </li>
 <li>Same as NULL in some other languages<br />
 </li>
-<li>Wirtten as</li>
+<li>Written as</li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">None</span></span></code></pre></div>
 </div>
@@ -721,7 +722,7 @@ list-style-type: none;
 <ul>
 <li>As the name implies a mix of different things put together<br />
 </li>
-<li>0 indexed (you count them from 0 not 1)
+<li>0 indexed (you count them from zero, not one)
 <ul>
 <li>Tuples - once set cannot be changed formed with brackets<br />
 </li>
@@ -756,9 +757,9 @@ list-style-type: none;
 <ul>
 <li>Series<br />
 </li>
-<li>Numpy Arrays (2 dimensional arrays)<br />
+<li>NumPy Arrays (2-dimensional arrays)<br />
 </li>
-<li>Pandas Dataframes (collections that are like spreadsheets)</li>
+<li>Pandas Data frames (collections that are like spreadsheets)</li>
 </ul></li>
 </ul>
 </div>
@@ -784,7 +785,7 @@ list-style-type: none;
 </li>
 <li>The concatenation operator (+)<br />
 </li>
-<li>Comparision operators (==, &gt;, &lt;, &gt;=, &lt;=, !=, is, is not)<br />
+<li>Comparison operators (==, &gt;, &lt;, &gt;=, &lt;=, !=, is, is not)<br />
 </li>
 <li>Logical operators (and, or)<br />
 </li>
@@ -830,7 +831,7 @@ list-style-type: none;
 <div id="the-concatenation-operator" class="slide section level2">
 <h1>The concatenation operator +</h1>
 <ul>
-<li>Plus(+) when used between string joins them<br />
+<li>Plus(+) when used between strings joins them<br />
 </li>
 </ul>
 <div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">+</span> c <span class="co">#concatenation</span></span></code></pre></div>
@@ -838,9 +839,9 @@ list-style-type: none;
 <div id="comparison-operators-is-is-not-in-not-in" class="slide section level2">
 <h1>Comparison operators (==, &gt;, &lt;, &gt;=, &lt;=, !=, is, is not, in, not in)</h1>
 <ul>
-<li>Comparison operators return a boolean as result<br />
+<li>Comparison operators return a Boolean as a result<br />
 </li>
-<li>for equality we use the double equality symbol since the single one is reserved for assignment<br />
+<li>for equality, we use the double equality symbol since the single one is reserved for assignment<br />
 </li>
 </ul>
 <div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#assigning variables</span></span>
@@ -873,7 +874,7 @@ list-style-type: none;
 <div id="logical-operators-and-or" class="slide section level2">
 <h1>Logical operators (and, or)</h1>
 <ul>
-<li>This lets you evaluate multiple booleans and get a single boolean</li>
+<li>This lets you evaluate multiple Booleans and get a single Boolean</li>
 <li>Seeing an example will make it easier to understand<br />
 </li>
 </ul>
@@ -889,6 +890,23 @@ list-style-type: none;
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>((x <span class="op">==</span> y) <span class="kw">and</span> (<span class="st">&#39;mango&#39;</span> <span class="kw">in</span> fruits)) <span class="kw">or</span> (z <span class="op">&gt;</span> y)</span></code></pre></div>
 </div>
+<div id="object-oriented-operator-." class="slide section level2">
+<h1>Object-oriented operator .</h1>
+<ul>
+<li>This is simply a dot (.)<br />
+</li>
+<li>We have seen this already when we accessed string methods<br />
+</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#simple list methods</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">&#39;mango&#39;</span>, <span class="st">&#39;apple&#39;</span>]</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>fruits.append(<span class="st">&#39;guava&#39;</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&#39;okokomaiko&#39;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>name.lower()</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>name.upper()</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>name.capitalize()</span></code></pre></div>
+</div>
 <div id="useful-to-know" class="slide section level2">
 <h1>Useful to know</h1>
 <ul>
@@ -896,19 +914,19 @@ list-style-type: none;
 </li>
 <li>Writing comments in python<br />
 </li>
-<li>We have seen variables, some other languages have constants but python doesnt have that in its current construct<br />
+<li>We have seen variables, some other languages have constants but python doesn’t have that in its current construct<br />
 </li>
 <li>f-strings</li>
 </ul>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&#39;Stephen&#39;</span>  </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Hello </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&#39;Stephen&#39;</span>  </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Hello </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
 </div>
 <div id="gist-and-training-docs" class="slide section level2">
 <h1>Gist and training docs</h1>
 <ul>
 <li><a href="https://gist.github.com/djynnius/63d5a3a5f855e921a979dccc288dec38">Data Types and Operators</a><br />
 </li>
-<li><a href="./02.Python.Data.Types.and.Operators.pdf">PDF version of module</a><br />
+<li><a href="./02.Python.Data.Types.and.Operators.pdf">PDF version of this module</a><br />
 </li>
 <li>The Jupyter Notebook will be shared over <strong>Slack</strong></li>
 </ul>
@@ -925,27 +943,27 @@ list-style-type: none;
 <div id="housekeeping" class="slide section level2">
 <h1>Housekeeping</h1>
 <ul>
-<li>We have named one of the channels <em>Homework</em> and this can be used for all conversations about the homework between classes<br />
+<li>We have named one of the channels <strong>homework</strong> and this can be used for all conversations about the homework between classes<br />
 </li>
-<li>The #data-science-with-python will be for vidoes and materials including Jupyter Notebook files and other codes<br />
+<li>The <strong>#data-science-with-python</strong> will be for videos and materials including Jupyter Notebook files and other codes<br />
 </li>
-<li>#general can be used for other conversation that is not homework related<br />
+<li><strong>#general</strong> can be used for other conversations that is not homework related<br />
 </li>
-<li>#random can be used for all other conversation including things not related to data science :-)</li>
+<li><strong>#random</strong> can be used for all other conversation including things not related to data science :-)</li>
 </ul>
 </div>
 <div id="conclusion" class="slide section level2">
 <h1>Conclusion</h1>
 <ul>
-<li>Lets go over our learning objectives again
+<li>Let’s go over our learning objectives again
 <ul>
-<li>Undertand the core components of programing languages<br />
+<li>Understand the core components of programming languages<br />
 </li>
 <li>Understand the core construct of python<br />
 </li>
 <li>Understand data types in python and be able to name and describe them<br />
 </li>
-<li>Understanding how date types in python map to data types in data science<br />
+<li>Understanding how data types in python map to data types in data science<br />
 </li>
 <li>Understanding operators and operator types</li>
 </ul></li>
