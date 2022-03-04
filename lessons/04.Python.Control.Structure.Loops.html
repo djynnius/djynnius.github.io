@@ -371,6 +371,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">#print(value)</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">#print(f&quot;His {key} is {value}&quot;)</span></span></code></pre></div>
 </div>
+<div id="combining-logic-and-loops" class="slide section level2">
+<h1>Combining Logic and Loops</h1>
+<ul>
+<li>Sometimes we may want something in a collection or to select a subset based on some criteria<br />
+</li>
+<li>An example is knowing how many defenders are in a team<br />
+</li>
+<li>Another may be selecting only those students that are attackers in a school<br />
+</li>
+<li>Or even knowing those who have jersey numbers less than a particular number</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#lets creata a list of students with each students information being in a dictionary form  </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>team  <span class="op">=</span> [</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;JJ Okocha&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">10</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;midfield&#39;</span>}, </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Garba Lawal&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">12</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;midfield&#39;</span>}, </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Ruben Agboola&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">5</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;defence&#39;</span>}, </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Rashidi Yekini&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">9</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;attack&#39;</span>}, </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Peter Rufai&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">1</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;goalkeper&#39;</span>}, </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Onazi&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">4</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;midfield&#39;</span>}, </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Troost Ekong&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">5</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;defence&#39;</span>}, </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Sunday Oliseh&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">15</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;midfield&#39;</span>}, </span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Samson Siasia&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">8</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;attack&#39;</span>}, </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Daniel Amokachi&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">14</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;attack&#39;</span>}, </span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;John Utaka&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">8</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;attack&#39;</span>}, </span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Celestine Babayaro&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">3</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;defence&#39;</span>}, </span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Manga Mohammed&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">22</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;midfield&#39;</span>}, </span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Augustine Eguavoen&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">2</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;defence&#39;</span>}, </span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Leon Balogun&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;defence&#39;</span>}, </span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Finidi George&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">7</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;midfield&#39;</span>}, </span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;name&#39;</span>: <span class="st">&#39;Emmanuel Amunike&#39;</span>, <span class="st">&#39;number&#39;</span>: <span class="dv">11</span>, <span class="st">&#39;position&#39;</span>: <span class="st">&#39;midfield&#39;</span>}, </span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>] </span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> player <span class="kw">in</span> team:</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>player[<span class="st">&#39;name&#39;</span>]<span class="sc">}</span><span class="ss"> with jersey number </span><span class="sc">{</span>player[<span class="st">&#39;number&#39;</span>]<span class="sc">}</span><span class="ss"> is an </span><span class="sc">{</span>player[<span class="st">&#39;position&#39;</span>]<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+</div>
 <div id="review-of-objectives" class="slide section level2">
 <h1>Review of objectives</h1>
 <ul>
