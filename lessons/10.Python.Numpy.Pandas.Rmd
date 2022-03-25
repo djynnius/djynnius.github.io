@@ -1,0 +1,128 @@
+---
+title: '10. Python - NumPy and Pandas'
+author: '3ikakke'
+date: 'Friday 25th March 2022'
+output: slidy_presentation
+footer: '3ikakke Datascience with Python'
+duration: 40
+---
+
+## Outline  
+- Objectives  
+- NumPy  
+- Up and running with Numpy  
+- NumPy arithmetic  
+- Numpy slicing  
+- Pandas  
+- Importing data as a DataFrame into Pandas  
+- Exploring DataFrame in Pandas  
+- Objectives Reviewed  
+- Gist of the day  
+- Q&A  
+
+## Objectives  
+- Understand why we need NumPy  
+- Explore NumPy  
+- Understand why we need Pandas  
+- Know how to import data with Pandas  
+- Understanding DataFrames    
+
+
+## NumPy  
+- Why Numpy?  
+	+ It all leads to tensors... scalars, vectors, matrices, tensors  
+- A new data type - NumPy arrays  
+- Complex computation  
+
+## Up and running with Numpy  
+- Importing  
+```python
+import numpy as np 
+```
+- Creating you first numpy arrays  
+```python
+scalar = np.array(3)
+vector = np.array([12, 5, 7])
+matrix = np.array([[3, 1, 2], [7, 5, 8]])
+
+#creating a zero nupy array
+onedim = np.zeros([1])
+twodim = np.zeros([3, 3])
+threedim = np.zeros([4, 3, 2])
+
+#you can do something similar with ones
+#most of what we will deal with are matrices (2-dimensional arrays)
+```
+
+## NumPy arithmetic  
+- You can add NumPy arrays without concatenating  
+```python
+a = [1, 2, 3]
+b = [5, 7, 8]
+print(a + b)
+
+c = np.array(a)
+d = np.array(b)
+print(c + d)
+
+print(c/2)
+print(d**3)
+
+```
+
+## Numpy slicing  
+```python
+board = np.random.randint(64, size=[8, 8])
+board[0, 5]
+board[:, :]
+board[0:3, 0:3]
+board[:, 3]
+board[3, :]
+```
+
+## Pandas  
+- This is pythons answer to handling data  
+- Another new data type - Data Frames  
+- Think spreadsheets when you think data frames  
+- Think of a combination of lists (columns) and dictionaries (rows)  
+- Pandas is built off NumPy  
+- Importing Pandas  
+```python
+import pandas as pd 
+```
+
+## Importing data as a DataFrame into Pandas  
+```python
+csv_file = pd.read_csv('some_file.csv')
+web_table = pd.read_html('http://www.website.com') #this returns a colletion of pandas data frames  
+excel_file = pd.read_excel('excel_file.xlsx', sheet='specify_sheet_else_first')
+```
+
+## Exploring DataFrame in Pandas  
+```python
+csv_file.info()
+csv_file.columns
+csv_file.shape
+csv_file.head()
+csv_file.tail()
+```
+
+
+## Objectives Reviewed  
+- Understand why we need NumPy  
+- Explore NumPy  
+- Understand why we need Pandas  
+- Know how to import data with Pandas  
+- Understanding DataFrames    
+
+## Gist of the day  
+- Get the [pdf version](./10.Python.Numpy.Pandas.pdf)  
+- Get the [gist](https://)  
+- The Jupyter Notebook will be uploaded  
+
+## Q&A  
+
+## Thanks for being here!  
+
+
+
