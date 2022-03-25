@@ -1,0 +1,1 @@
+(Fri) Python- Intro Numpy and Pandas- Numpy arrays, numpy array functions, introduction to pandas and the concept of dataframes (a new type of collection)
