@@ -1,0 +1,218 @@
+---
+author: 3ikakke  
+title: '06. Python Collections'  
+output: pdf_document  
+footer: '3ikakke Data Science with Python'  
+duration: 40  
+---
+
+## Outline  
+- Objectives  
+- Structure/Types  
+- Split and join  
+- Methods  
+- List Methods  
+- Set Methods  
+- Dictionary Methods  
+- Unpacking tuples, lists, and sets  
+- Looping (for loops)  
+
+
+## Objectives  
+- Understand collections better  
+- Learn about subsetting collections  
+- Learn about manipulating collections  
+- Understand some basics of collection functions and methods  
+- See how strings and collections are related  
+
+##  Structure/Types  
+- Tuples: 0 indexed collections that cannot be modified ()  
+- Lists: 0 indexed collections \[\]  
+- Sets: collections of unique values {}   
+- Dictionaries: a collection of key:value pairs  
+
+##  Structure/Types (contd)  
+- Indexing  
+```python
+fruits = ['orange', 'apple', 'guava', 'banana', 'mango', 'grapes', 'cashews'] 
+player = {'name': 'Oliseh', 'position': 'midfield', 'team': 'super eagles'}
+team_94 = {'okocha', 'nwanu', 'oliseh', 'amuneke', 'iroha'} 
+team_98 = {'garba', 'oliseh', 'ogbeche', 'ikpeba', 'okocha', 'taribo'}
+story = "As I was going to St. Ives, I met a man with seven wives"
+date = '31/5/2022' 
+olympics = ('united states of america', 'china', 'japan')
+
+print(fruits[0])
+print(fruits[-1])
+print(fruits[-2])
+
+print(story[5])
+print(story[12])
+print(player['name'])
+```
+
+##  Structure/Types (contd)  
+- Slicing  
+```python
+print(fruits[1:4])
+print(fruits[2:5])
+print(fruits[-4:-1])
+print(fruits[-5:-2])
+print(story[5:14])
+print(story[-28:-16])
+```
+
+##  Structure/Types (contd)  
+- Updating  
+```python 
+fruits[1] = 'water melon'
+print(fruits)
+fruits[-1] = 'cashew'
+print(fruits)
+player['team'] = 'ajax'
+print(player)
+
+fruits[1:4] = ['tomatoes', 'onions', 'pepper', 'coconut']
+print(fruits)
+```
+
+##  Structure/Types (contd)  
+- Deleting  
+```python
+del fruits[3] 
+print(fruits) 
+del fruits[2:4]
+print(fruits)
+del player['name']
+print(player)
+```
+
+## Split and join  
+- Let's you split words using spaces or some other delimiter  
+```python
+word_salad = story.split()
+print(word_salad)
+scattered_date = date.split('/')
+print(scattered_date[0])
+print(scattered_date[1])
+print(scattered_date[2])
+
+day = scattered_date[0]
+month = scattered_date[1]
+year = scattered_date[2]
+```
+- You can join elemtents in a list using a delimiter  
+- Syntax is -> string_delimiter.join(list)
+```python
+merge_date = '-'.join(scattered_date)
+print(merge_date)
+
+fruit_salad = ', '.join(fruits)
+print(fruit_salad)
+```
+
+## Methods  
+- Lists  
+	+ .sort()   
+	+ .copy() 
+	+ .index() 
+	+ .insert()  
+	+ .pop() 
+- Sets  
+	+ .add() 
+	+ .union()  
+	+ .intersection() 
+	+ .difference() 
+- Dictionaries  
+	+ .keys() 
+	+ .values() 
+
+
+## List Methods  
+```python
+#reset fruits
+fruits = ['orange', 'apple', 'guava', 'banana', 'mango', 'grapes', 'cashews'] 
+print(fruits)
+
+fruits.sort()
+print(fruits)
+
+plants = fruits
+vegitables = fruits.copy()
+print(fruits)
+print(plants)
+print(vegitables)
+
+fruits[-1] = 'pear' 
+print(fruits)
+print(plants)
+print(vegitables)
+
+print(fruits.index('mango'))
+
+fruits.insert(3, 'almonds')
+
+print(fruits)
+
+x = fruits.pop()
+print(x)
+print(fruits)
+
+y = fruits.pop(3)
+print(y)
+print(fruits)
+```
+
+## Set Methods  
+```python
+print(team_94)
+print(team_98)
+
+team_94.add('ruffai')
+print(team_94)
+team_98.add('babayaro')
+print(team_98)
+
+print(team_94)
+print(team_98)
+
+print(team_94.union(team_98))
+print(team_94.intersection(team_98))
+print(team_94.difference(team_98))
+print(team_98.difference(team_94))
+
+```
+
+## Dictionary Methods  
+```python
+#reset player
+player = {'name': 'Oliseh', 'position': 'midfield', 'team': 'super eagles'}
+
+print(player)
+print(player.keys())
+print(player.values())
+```
+
+## Unpacking tuples, lists, and sets  
+- You can unpack tuples, lists, and sets to several variables at once!  
+```python
+first, second, third = olympics
+print(first)
+print(second)
+print(third)
+```
+
+## Looping (for loops)  
+```python
+for fruit in fruits:
+	print(fruit)
+```
+
+## Gist of the day  
+- Get the [pdf version](./06.Python.Collections.pdf) of todays class  
+- Get the [gist](https://gist.github.com/djynnius/5d28d1411642a1fc9d0c3799c4c57b2f)  
+- The Jupyter Nnotebook will be uploaded  
+
+## Q&A  
+
+## Thanks for listening and contributing!  
