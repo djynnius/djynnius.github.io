@@ -1,5 +1,5 @@
 ---
-title: '11. Python SQLAlchemy'
+title: '12. Python SQLAlchemy'
 author: 3ikakke
 date: 'Friday, March 1st, 2022'
 footer: '3ikakke Data Science with Python'
@@ -96,8 +96,8 @@ pip install seaborn
 ## Q&A  
 
 ## Gist of the day  
-- The gist for the day can be found [here]()  
-- The pdf version of this class can be found [here]()  
+- The gist for the day can be found [here](https://gist.github.com/djynnius/fe96d3e6ae40b343b1e51664a69836b5)  
+- The pdf version of this class can be found [here](./12.Python.SQL.pdf)  
 - The Jupyter Notebook will be uploaded   
 
 ## Next stop: Statistics!  
