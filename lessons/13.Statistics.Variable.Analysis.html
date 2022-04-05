@@ -546,11 +546,11 @@ list-style-type: none;
 </li>
 <li>Exploring single categorical data<br />
 </li>
-<li>Exploring numeric and categorical data<br />
+<li>Exploring two variables (numeric vs numeric)<br />
 </li>
-<li>Exploring 2 categorical variables<br />
+<li>Exploring two variables (categorical vs categorical)<br />
 </li>
-<li>Exploring 2 Numeric:<br />
+<li>Exploring two variables (numeric vs categorical)<br />
 </li>
 <li>Review Objectives<br />
 </li>
@@ -658,21 +658,21 @@ list-style-type: none;
 <div id="exploring-single-numeric-data" class="slide section level2">
 <h1>Exploring single numeric data</h1>
 <ul>
+<li>Univariate analysis for numeric variable<br />
+</li>
 <li>Distribution<br />
 </li>
 <li>Normal vs Not Normal<br />
 </li>
-<li>Non Normal
-<ul>
 <li>Five number summary
 <ul>
 <li>Minimum<br />
 </li>
-<li>First Quartile (Q1)<br />
+<li>First Quartile (Q1) <span style="color: red">Reported for non normal distributions</span><br />
 </li>
-<li>Median (Q2) - Reported for non normal distributions<br />
+<li>Median (Q2) - <span style="color: red">Reported for non normal distributions</span><br />
 </li>
-<li>Third Quartile (Q3)<br />
+<li>Third Quartile (Q3) <span style="color: red">Reported for non normal distributions</span><br />
 </li>
 <li>Maximim</li>
 </ul></li>
@@ -680,11 +680,10 @@ list-style-type: none;
 <ul>
 <li>Range (Maximum - Minimum)<br />
 </li>
-<li>Inter Quartile Range (Q3 - Q1)- reported for non normal distributions</li>
-<li>mean - reported for normal distributions<br />
+<li>Inter Quartile Range (Q3 - Q1)- <span style="color: red">reported for non normal distributions</span></li>
+<li>mean - <span style="color: green">reported for normal distributions</span><br />
 </li>
-<li>standard deviation - reported for normal distributions</li>
-</ul></li>
+<li>standard deviation - <span style="color: green">reported for normal distributions</span></li>
 </ul></li>
 </ul>
 </div>
@@ -692,21 +691,19 @@ list-style-type: none;
 <h1>Exploring single numeric data with python</h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>dataset <span class="op">=</span> pd.read_csv(<span class="st">&quot;some_dataset.csv&quot;</span>) </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>var_min <span class="op">=</span> dataset[<span class="st">&#39;var&#39;</span>].<span class="bu">min</span>()</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>var_max <span class="op">=</span> dataset[<span class="st">&#39;var&#39;</span>].<span class="bu">max</span>()</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>var_Q1 <span class="op">=</span> dataset[<span class="st">&#39;var&#39;</span>].quantile(<span class="fl">0.25</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>var_Q3 <span class="op">=</span> dataset[<span class="st">&#39;var&#39;</span>].quantile(<span class="fl">0.75</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>var_median <span class="op">=</span> dataset[<span class="st">&#39;var&#39;</span>].median()</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>var_mean <span class="op">=</span> dataset[<span class="st">&#39;var&#39;</span>].mean()</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>var_sd <span class="op">=</span> dataset[<span class="st">&#39;var&#39;</span>].std()</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>var_range <span class="op">=</span> vat_max <span class="op">-</span> var_min</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>var_iqr <span class="op">=</span> var_Q3 <span class="op">-</span> var_Q1</span></code></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>summary <span class="op">=</span> dataset[<span class="st">&#39;numvar&#39;</span>].describe()</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>data_range <span class="op">=</span> summary[<span class="st">&#39;max&#39;</span>] <span class="op">-</span> summary[<span class="st">&#39;min&#39;</span>]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>data_iqr <span class="op">=</span> summary[<span class="st">&#39;75%&#39;</span>] <span class="op">-</span> summary[<span class="st">&#39;25%&#39;</span>]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_range)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_iqr)</span></code></pre></div>
 </div>
 <div id="exploring-single-categorical-data" class="slide section level2">
 <h1>Exploring single categorical data</h1>
 <ul>
+<li>Univariate analysis for categorical variable<br />
+</li>
 <li>Frequencies (How many in each category?)<br />
 </li>
 <li>Proportions (Frequencies expressed as fractions)<br />
@@ -716,36 +713,46 @@ list-style-type: none;
 </div>
 <div id="exploring-single-categorical-data-pandas" class="slide section level2">
 <h1>Exploring single categorical data (Pandas)</h1>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dataset[<span class="st">&#39;var&#39;</span>].value_counts() <span class="co">#Frequencies </span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>dataset[<span class="st">&#39;var&#39;</span>].value_counts()<span class="op">/</span>dataset[<span class="st">&#39;var&#39;</span>].value_counts().<span class="bu">sum</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>frequencies <span class="op">=</span> dataset[<span class="st">&#39;var&#39;</span>].value_counts() <span class="co">#Frequencies </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>proportions <span class="op">=</span> frequencies<span class="op">/</span>frequencies.<span class="bu">sum</span>()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>percentages <span class="op">=</span> proportion<span class="op">*</span><span class="dv">100</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(frequencies)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(proportions)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(percentages)</span></code></pre></div>
 </div>
-<div id="exploring-numeric-and-categorical-data" class="slide section level2">
-<h1>Exploring numeric and categorical data</h1>
+<div id="exploring-two-variables-numeric-vs-numeric" class="slide section level2">
+<h1>Exploring two variables (numeric vs numeric)</h1>
 <ul>
-<li>Look at the numeric summaries at each level of the categorical variable<br />
+<li>Bivariate analysis for two numeric variables<br />
 </li>
-<li>Example - Sex vs Age
+<li>Correlation:</li>
+<li>Does one change with the other?<br />
+</li>
+<li>Pearson’s correlation coefficient (R)</li>
+<li><span class="math inline">\(R^2\)</span><br />
+</li>
+<li>Pearson’s correlation coefficient ranges from -1 through 0 to +1
 <ul>
-<li>Report 5 number summary for males</li>
-<li>Report 5 number summary for females<br />
+<li>Negative correlation means as one increases the other reduces<br />
 </li>
-<li>Compare the 2 summaries</li>
+<li>Positive correlation means they both increase or decrease together<br />
+</li>
+<li>0 means there is no correlation<br />
+</li>
+<li>The closer to -1 ot +1 the stronger the correlation</li>
 </ul></li>
 </ul>
 </div>
-<div id="exploring-numeric-and-categorical-data-1" class="slide section level2">
-<h1>Exploring numeric and categorical data</h1>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dataset[[<span class="st">&#39;quant&#39;</span>, <span class="st">&#39;cat&#39;</span>]].groupby(<span class="st">&#39;cat&#39;</span>).<span class="bu">min</span>()</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>dataset[[<span class="st">&#39;quant&#39;</span>, <span class="st">&#39;cat&#39;</span>]].groupby(<span class="st">&#39;cat&#39;</span>).<span class="bu">max</span>()</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>dataset[[<span class="st">&#39;quant&#39;</span>, <span class="st">&#39;cat&#39;</span>]].groupby(<span class="st">&#39;cat&#39;</span>).quantile(<span class="fl">0.25</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>dataset[[<span class="st">&#39;quant&#39;</span>, <span class="st">&#39;cat&#39;</span>]].groupby(<span class="st">&#39;cat&#39;</span>).quantile(<span class="fl">0.75</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>dataset[[<span class="st">&#39;quant&#39;</span>, <span class="st">&#39;cat&#39;</span>]].groupby(<span class="st">&#39;cat&#39;</span>).mean()</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>dataset[[<span class="st">&#39;quant&#39;</span>, <span class="st">&#39;cat&#39;</span>]].groupby(<span class="st">&#39;cat&#39;</span>).median()</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>dataset[[<span class="st">&#39;quant&#39;</span>, <span class="st">&#39;cat&#39;</span>]].groupby(<span class="st">&#39;cat&#39;</span>).std()</span></code></pre></div>
+<div id="exploring-two-variables-numeric-vs-numeric---pandas" class="slide section level2">
+<h1>Exploring two variables (numeric vs numeric) - Pandas</h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dataset[[<span class="st">&#39;quant1&#39;</span>, <span class="st">&#39;quant2&#39;</span>]].corr()</span></code></pre></div>
 </div>
-<div id="exploring-2-categorical-variables" class="slide section level2">
-<h1>Exploring 2 categorical variables</h1>
+<div id="exploring-two-variables-categorical-vs-categorical" class="slide section level2">
+<h1>Exploring two variables (categorical vs categorical)</h1>
 <ul>
+<li>Bivariate analysis for two categorical variables<br />
+</li>
 <li>Frequencies and Proportions<br />
 </li>
 <li>Use a two way table<br />
@@ -779,34 +786,42 @@ list-style-type: none;
 <li>A two-way table tells so many stories all at once</li>
 </ul>
 </div>
-<div id="exploring-2-categorical-variables-1" class="slide section level2">
-<h1>Exploring 2 categorical variables</h1>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pd.crosstab(dataset[<span class="st">&#39;cat1&#39;</span>], dataset[<span class="st">&#39;cat2&#39;</span>])</span></code></pre></div>
+<div id="exploring-two-variables-categorical-vs-categorical---pandas" class="slide section level2">
+<h1>Exploring two variables (categorical vs categorical) - Pandas</h1>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>crosstable <span class="op">=</span> pd.crosstab(dataset[<span class="st">&#39;cat1&#39;</span>], dataset[<span class="st">&#39;cat2&#39;</span>])</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>proportions <span class="op">=</span> crosstable<span class="op">/</span>crosstable.<span class="bu">sum</span>().<span class="bu">sum</span>()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>percentages <span class="op">=</span> proportions<span class="op">*</span><span class="dv">100</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(crosstable)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(proportions)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(frequencies)</span></code></pre></div>
 </div>
-<div id="exploring-2-numeric" class="slide section level2">
-<h1>Exploring 2 Numeric:</h1>
+<div id="exploring-two-variables-numeric-vs-categorical---pandas" class="slide section level2">
+<h1>Exploring two variables (numeric vs categorical) - Pandas</h1>
 <ul>
-<li>Correlation:</li>
-<li>Pearson’s correlation coefficient (R)</li>
-<li><span class="math inline">\(R^2\)</span><br />
+<li>Bivariate analysis for two variables with one numeric and the other categorical<br />
 </li>
-<li>Ranging from -1 through 0 to +1
+<li>Look at the numeric summaries at each level of the categorical variable<br />
+</li>
+<li>Example - Sex vs Age
 <ul>
-<li>Negative correlation means as one increases the other reduces<br />
+<li>Report 5 number summary for males</li>
+<li>Report 5 number summary for females<br />
 </li>
-<li>Positive correlation means they both increase or decrease together<br />
-</li>
-<li>0 means there is no correlation<br />
-</li>
-<li>The closer to -1 ot +1 the stronger the correlation<br />
-</li>
+<li>Compare the 2 summaries</li>
 </ul></li>
-<li>Does one change with the other?</li>
 </ul>
 </div>
-<div id="exploring-2-numeric-1" class="slide section level2">
-<h1>Exploring 2 Numeric:</h1>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dataset[[<span class="st">&#39;quant1&#39;</span>, <span class="st">&#39;quant2&#39;</span>]].corr()</span></code></pre></div>
+<div id="exploring-numeric-and-categorical-data" class="slide section level2">
+<h1>Exploring numeric and categorical data</h1>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>summary <span class="op">=</span> dataset[[<span class="st">&#39;numeric&#39;</span>, <span class="st">&#39;categorical&#39;</span>]].groupby(<span class="st">&#39;categorical&#39;</span>).describe()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>group_means <span class="op">=</span> dataset[[<span class="st">&#39;numeric&#39;</span>, <span class="st">&#39;categorical&#39;</span>]].groupby(<span class="st">&#39;categorical&#39;</span>).mean()</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>group_sd <span class="op">=</span> dataset[[<span class="st">&#39;numeric&#39;</span>, <span class="st">&#39;categorical&#39;</span>]].groupby(<span class="st">&#39;categorical&#39;</span>).std()</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(group_means)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(group_sd)</span></code></pre></div>
 </div>
 <div id="review-objectives" class="slide section level2">
 <h1>Review Objectives</h1>

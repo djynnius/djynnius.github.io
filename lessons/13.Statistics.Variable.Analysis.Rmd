@@ -15,9 +15,9 @@ date: 'Monday 4th April 2022'
 - Probability  
 - Exploring single numeric data  
 - Exploring single categorical data  
-- Exploring numeric and categorical data    
-- Exploring 2 categorical variables  
-- Exploring 2 Numeric:  
+- Exploring two variables (numeric vs numeric)    
+- Exploring two variables (categorical vs categorical)    
+- Exploring two variables (numeric vs categorical)    
 - Review Objectives  
 - Q&A  
 - Gist of the day   
@@ -70,71 +70,71 @@ date: 'Monday 4th April 2022'
 	6. $P(A|B) = {{P(A)*P(B\cap{A})}\over{P(B)}}$ This is Bayes rule.  
 
 ## Exploring single numeric data  
+- Univariate analysis for numeric variable  
 - Distribution  
 - Normal vs Not Normal  
-- Non Normal  
-	+ Five number summary  
-		+ Minimum  
-		+ First Quartile (Q1)  
-		+ Median (Q2) - Reported for non normal distributions  
-		+ Third Quartile (Q3)  
-		+ Maximim 
-	+ Additional summaries  
-		+ Range (Maximum - Minimum)  
-		+ Inter Quartile Range (Q3 - Q1)- reported for non normal distributions 
-		+ mean - reported for normal distributions  
-		+ standard deviation - reported for normal distributions  
+- Five number summary  
+	+ Minimum  
+	+ First Quartile (Q1) <span style='color: red'>Reported for non normal distributions</span>  
+	+ Median (Q2) - <span style='color: red'>Reported for non normal distributions</span>  
+	+ Third Quartile (Q3) <span style='color: red'>Reported for non normal distributions</span>    
+	+ Maximim 
+- Additional summaries  
+	+ Range (Maximum - Minimum)  
+	+ Inter Quartile Range (Q3 - Q1)- <span style='color: red'>reported for non normal distributions</span> 
+	+ mean - <span style='color: green'>reported for normal distributions</span>  
+	+ standard deviation - <span style='color: green'>reported for normal distributions</span>  
 
 
 ## Exploring single numeric data with python  
 ```python
 import pandas as pd 
 dataset = pd.read_csv("some_dataset.csv") 
+summary = dataset['numvar'].describe()
+data_range = summary['max'] - summary['min']
+data_iqr = summary['75%'] - summary['25%']
 
-var_min = dataset['var'].min()
-var_max = dataset['var'].max()
-var_Q1 = dataset['var'].quantile(0.25)
-var_Q3 = dataset['var'].quantile(0.75)
-var_median = dataset['var'].median()
-var_mean = dataset['var'].mean()
-var_sd = dataset['var'].std()
-
-var_range = vat_max - var_min
-var_iqr = var_Q3 - var_Q1
-
+print(summary)
+print(data_range)
+print(data_iqr)
 ```
 
 ## Exploring single categorical data  
+- Univariate analysis for categorical variable  
 - Frequencies (How many in each category?)  
 - Proportions (Frequencies expressed as fractions)  
 - Percentages (Proportions multiplied by 100 to convert to percentages)  
 
 ## Exploring single categorical data (Pandas)  
 ```python
-dataset['var'].value_counts() #Frequencies 
-dataset['var'].value_counts()/dataset['var'].value_counts().sum()
+frequencies = dataset['var'].value_counts() #Frequencies 
+proportions = frequencies/frequencies.sum()
+percentages = proportion*100
+
+print(frequencies)
+print(proportions)
+print(percentages)
 ```
 
-## Exploring numeric and categorical data    
-- Look at the numeric summaries at each level of the categorical variable  
-- Example - Sex vs Age
-	+ Report 5 number summary for males 
-	+ Report 5 number summary for females  
-	+ Compare the 2 summaries  
+## Exploring two variables (numeric vs numeric)  
+- Bivariate analysis for two numeric variables  
+- Correlation:
+- Does one change with the other?  
+- Pearson's correlation coefficient (R) 
+- $R^2$  
+- Pearson's correlation coefficient ranges from -1 through 0 to +1
+	+ Negative correlation means as one increases the other reduces  
+	+ Positive correlation means they both increase or decrease together  
+	+ 0 means there is no correlation  
+	+ The closer to -1 ot +1 the stronger the correlation  
 
-## Exploring numeric and categorical data    
+## Exploring two variables (numeric vs numeric) - Pandas   
 ```python
-dataset[['quant', 'cat']].groupby('cat').min()
-dataset[['quant', 'cat']].groupby('cat').max()
-dataset[['quant', 'cat']].groupby('cat').quantile(0.25)
-dataset[['quant', 'cat']].groupby('cat').quantile(0.75)
-dataset[['quant', 'cat']].groupby('cat').mean()
-dataset[['quant', 'cat']].groupby('cat').median()
-dataset[['quant', 'cat']].groupby('cat').std()
-
+dataset[['quant1', 'quant2']].corr()
 ```
 
-## Exploring 2 categorical variables  
+## Exploring two variables (categorical vs categorical)  
+- Bivariate analysis for two categorical variables  
 - Frequencies and Proportions  
 - Use a two way table  
 - This reinforces the concept of $\cup$ Unions, $\cap$ Intersections and $|$ conditional probability (given)  
@@ -148,26 +148,36 @@ kable(a)
 ```
 - A two-way table tells so many stories all at once
 
-## Exploring 2 categorical variables  
+## Exploring two variables (categorical vs categorical) - Pandas  
 ```python
-pd.crosstab(dataset['cat1'], dataset['cat2'])
+crosstable = pd.crosstab(dataset['cat1'], dataset['cat2'])
+proportions = crosstable/crosstable.sum().sum()
+percentages = proportions*100
 
+print(crosstable)
+print(proportions)
+print(frequencies)
 ```
 
-## Exploring 2 Numeric:  
-- Correlation:
-- Pearson's correlation coefficient (R) 
-- $R^2$  
-- Ranging from -1 through 0 to +1
-	+ Negative correlation means as one increases the other reduces  
-	+ Positive correlation means they both increase or decrease together  
-	+ 0 means there is no correlation  
-	+ The closer to -1 ot +1 the stronger the correlation  
-- Does one change with the other?  
 
-## Exploring 2 Numeric:  
+## Exploring two variables (numeric vs categorical) - Pandas   
+- Bivariate analysis for two variables with one numeric and the other categorical     
+- Look at the numeric summaries at each level of the categorical variable  
+- Example - Sex vs Age
+	+ Report 5 number summary for males 
+	+ Report 5 number summary for females  
+	+ Compare the 2 summaries  
+
+## Exploring numeric and categorical data    
 ```python
-dataset[['quant1', 'quant2']].corr()
+
+summary = dataset[['numeric', 'categorical']].groupby('categorical').describe()
+group_means = dataset[['numeric', 'categorical']].groupby('categorical').mean()
+group_sd = dataset[['numeric', 'categorical']].groupby('categorical').std()
+
+print(summary)
+print(group_means)
+print(group_sd)
 ```
 
 ## Review Objectives  
