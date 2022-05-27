@@ -1,0 +1,93 @@
+---
+author: 3ikakke
+date: 'March 18th, 2022'
+title: '08. Python Object Oriented Programing'
+footer: '3ikakke Data Science with Python'
+duration: 40
+output: pdf_document
+---
+
+## Outline  
+- Objectives  
+- Object Oriented Programing (OOP) Conceptually  
+- Classes: the blueprint  
+- Objects: instances of classes  
+- Practical examples  
+- Review of Objectives  
+- Gist for the day  
+
+## Objectives  
+- Understand the concept of Object Oriented Programing  
+- Understand classes  
+- Understand objects  
+- Understand attributes  
+- Understand methods  
+
+## Object Oriented Programing (OOP) Conceptually  
+- Think for a moment how coding feels a lot like writing tons of incomprehensible text  
+- Imagine a world where programming doest have to be incomprehensible  
+- Also imagine where components much like in real life are fitted together  
+- That world exists  
+- Everything can be thought of as objects  
+
+## Classes: the blueprint  
+- To have objects they have to come from a blueprint or mold  
+- In architecture there’s a plan  
+- These are used to create multiple objects that look the same and act the same in their core  
+- They may have differences in attributes such as location, color, etc but at the core, they are all the same because they come from the same mold  
+- These moulds are classes  
+```python  
+person1 = Student('David', 'Lee', 'Melbourne, Australia')
+person2 = Student('Ahmed', 'Ali', 'Doha, Qatar')
+
+
+university1 = School('University of Lagos', 'tertiary')
+university2 = School('Oxford University')
+
+person1.current_school = university2
+person2.current_school = university1
+
+
+person1.enroll(university1, 'Space Technology')
+person1.enroll(university2, 'Strategic Studies')
+person2.enroll(university1, 'Economics')
+
+
+print(person1.get_schools())
+print(person1.get_courses())
+
+print(person2.current_school.get_students())
+
+```
+
+## Objects: instances of classes  
+- Objects are instances of classes  
+- There can be multiple objects that are instances of a class  
+- Each object is an entity of its own  
+- Objects have attributes - things that make them unique  
+- Objects have methods  - things that they can do or can be done to them  
+
+## Practical examples  
+- dir() and help() methods  
+- Strings  
+- Lists  
+- Dictionaries  
+
+## Review of Objectives  
+- Understand the concept of Object Oriented Programing  
+- Understand classes  
+- Understand objects  
+- Understand attributes  
+- Understand methods  
+
+## Gist for the day  
+- Get the [pdf version](./08.Python.OOP.pdf) of this class notes  
+- Get the [gist](https://gist.github.com/djynnius/570481af2bd717b08e3a98e090ada6a8)    
+- Get the kaggle file for Excel practice => Disease Outbreaks in Nigeria  
+
+## Q&A  
+
+## Thanks!
+
+
+

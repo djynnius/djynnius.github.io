@@ -1,0 +1,128 @@
+---
+author: 3ikakke 
+title: '17. Machine Learning - Regression'
+duration: 50  
+footer: '3ikakke Datascience with python'
+output: slidy_presentation 
+date: 'Monday 25th April 2022'
+---
+
+## Outline  
+- Objectives  
+- Regression  
+- Assumptions for a linear regression  
+- Exploring data  before regression  
+- A review of regression  
+- Regressions with categorical data  
+- Remember the steps  
+- Evaluating the model  
+- Other considerations  
+- Q&A  
+- Review of objectives  
+- Gist of the day  
+
+
+## Objectives  
+- Understand regressions  
+
+## Regression  
+- Simple Linear Regression  
+	+ $y = \beta_0 + \beta_1x_1$  
+- Multi linear Regression  
+	+ $y = \beta_0 + \beta_1x_1 + \beta_2x_2 + ... +  \beta_nx_n$  
+- Polynomial Regression  
+	+ $y = \beta_0 + \beta_1x_1 + \beta_2x_1^2 ...$  
+- Support Vector Machine Regression 
+- Decision Tree Regression  
+
+## Assumptions for a linear regression  
+- LINE  
+	+ L - Linear relationship (correlation could help here or visually plotting bivariates)  
+	+ I - Independent observations  
+	+ N - Normal distribution of variables  
+	+ E - Equal variance  
+
+## Exploring data  before regression  
+- LINE  
+	+ L - Linear relationship (correlation could help here or visually plotting bivariates)      
+		`df.corr(dataframe) #explore correlation`  
+		`sns.headtmap(df.corr(), anot=True) #visually explore correlation`  
+		`sns.lmplot(x, y, data)`  
+	+ I - Independent observations  
+	+ N - Normal distribution of variables  
+		`sns.distplot(df['num']) #single variable`  
+		`sns.jointplot(x, y, data) bivariate look`
+		`sns.pairplot(dataset) #all variables ar once` 
+	+ E - Equal variance  
+
+## A review of regression  
+- Remember the bivariate analysis?  
+	+ `from scipy.stats import lineregress #for simple linear regression `  
+- Using the statsmodels module  
+```python
+	import statsmodels.formula.api as smf
+	lm = smf.ols(formula='y ~ x1 + x2 + x3 + x4 + x5 + x6 + x7', data=df).fit()
+	print(lm.summary())
+```
+- Backward selection model building
+
+
+## Regressions with categorical data  
+- Categorical data cannot be throw into equations!  
+- How then do they contrinbute?  
+- Convert to multiple binary variables!  
+- These are called dummy variables  
+
+
+## Remember the steps  
+- Part 1: Preparing the data  
+	+ Import the required library  
+	`from sklearn.model_selection import train_test_split`  
+	+ Create the splits  
+	`training_feature, test_feature, training_label, test_label = train_test_split(features, labels, test_size=0.25, random_state=101)`  
+- Part 2: The regression  
+	+ Import the required algorithm class form its family  
+	`from sklearn.linear_model import LinearRegression`  
+	+ Instantiate the class  
+	`model = LinearRegression()`  
+	+ Build your model (train the data)  
+	`model.fit(training_features, training_label)`  
+	+ Make your prediction  
+	`predicted_labels = model.predict(test_features)`  
+
+## Evaluating the model  
+- You can look a the inercept (c, or $\beta_0$) and the slope (m, or $\beta_1$)  
+	+ intercept = model.intercept_  
+	+ slope = model.coef_   
+- Compare predicted labels to test labels (that is the actual label)  
+```python  
+	plt.scatter(predicted_labels, actual_labels) 
+	plt.plot(training_features, model.predict(training_labels), color='blue')		
+```  
+- Explore the residuals to see if they are approximately normally distributed  
+```python
+	sns.distplot((predicted_labels, actual_labels))
+```  
+- Evaluating based on error  
+```python
+	from sklearn import metrics
+	metrics.mean_absolute_error(ytest, ypred)
+	metrics.mean_squared_error(ytest, ypred)
+	np.sqrt(metrics.mean_squared_error(ytest, ypred))
+	metrics.explained_variance_score(ytest, ypred) #R^2
+```  
+## Other considerations  
+- Scaling of numeric data may become necessary if the scales are too wide apart.  
+
+## Q&A  
+
+## Review of objectives  
+- Understand regressions  
+
+
+## Gist of the day  
+
+ 
+
+
+
