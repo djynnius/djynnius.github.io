@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About 3ikakke",
+    "section": "",
+    "text": "print(\"Lets see\")\n\n[1] \"Lets see\""
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sunday Ikpe",
+    "section": "",
+    "text": "Hey there! I started my journey as a physician but switched gears to dive headfirst into the exciting world of tech. Along the way, I’ve explored everything from health informatics to computational epidemiology and data science. With nearly two decades of experience under my belt, I’ve become quite the coding ninja. I’ve tinkered with Python for over a decade, danced with SQL for more than 15 years, and dabbled in R for 7. Linux? Been there, done that for 15+ years. I’m also fluent in containerization (think Docker and LXC), JavaScript, and PHP. Oh, and let’s not forget my love affair with machine learning and big data! Leading teams is my jam—I’ve rallied groups of up to 20 pros to tackle some seriously cool projects. Right now, I’m rocking it as a Senior Research Analyst, always hungry for the next data-driven adventure. Let’s connect and make some magic together!\nI am a husband, love music and play a little of the keyboards and bass guitar. I do some chess, but am definitely not a master. A huge Liverpool football club fan (YNWA!)."
+  },
+  {
+    "objectID": "index.html#profile",
+    "href": "index.html#profile",
+    "title": "Sunday Ikpe",
+    "section": "",
+    "text": "Hey there! I started my journey as a physician but switched gears to dive headfirst into the exciting world of tech. Along the way, I’ve explored everything from health informatics to computational epidemiology and data science. With nearly two decades of experience under my belt, I’ve become quite the coding ninja. I’ve tinkered with Python for over a decade, danced with SQL for more than 15 years, and dabbled in R for 7. Linux? Been there, done that for 15+ years. I’m also fluent in containerization (think Docker and LXC), JavaScript, and PHP. Oh, and let’s not forget my love affair with machine learning and big data! Leading teams is my jam—I’ve rallied groups of up to 20 pros to tackle some seriously cool projects. Right now, I’m rocking it as a Senior Research Analyst, always hungry for the next data-driven adventure. Let’s connect and make some magic together!\nI am a husband, love music and play a little of the keyboards and bass guitar. I do some chess, but am definitely not a master. A huge Liverpool football club fan (YNWA!)."
+  },
+  {
+    "objectID": "index.html#toolsskills",
+    "href": "index.html#toolsskills",
+    "title": "Sunday Ikpe",
+    "section": "Tools/Skills",
+    "text": "Tools/Skills\nPython | PHP | R | SAS | SQL | HTML | JavaScript | CSS | Biostatistics | Epidemiology | Bioinformatics | Machine Learning | Natural Language Processing | Time Series Analysis | Geospatial Analysis | Docker | LXC | Linux | GGPlot | Tableau | Shiny | PySpark\n:::"
+  }
+]
