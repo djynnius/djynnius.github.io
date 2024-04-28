@@ -1,10 +1,17 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About 3ikakke",
+    "objectID": "midjourney.html",
+    "href": "midjourney.html",
+    "title": "MidJourney",
     "section": "",
-    "text": "print(\"Lets see\")\n\n[1] \"Lets see\""
+    "text": "Sydney Opera House\n\n\n\nLions in sunset\n\n\n\nPeople\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\n\n\n\n\n\n\nFigure 2\n\n\n\n\n\n\n\n\n\n\n\nFigure 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4\n\n\n\n\n\n\n\n\n\n\n\nFigure 5\n\n\n\n\n\n\n\n\n3D Graffitti\n\n\n\nStreet dance\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6\n\n\n\n\n\n\n\n\n\n\n\nFigure 7\n\n\n\n\n\n\n\n\nShekere\n\n\n\nDaughters of Zelophehad\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 8\n\n\n\n\n\n\n\n\n\n\n\nFigure 9\n\n\n\n\n\n\n\n\nEmergence\n\n\n\nMulti Racial\n\n\n\nFuturistic Army\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 10\n\n\n\n\n\n\n\n\n\n\n\nFigure 11\n\n\n\n\n\n\n\n\n\n\n\nFigure 12"
+  },
+  {
+    "objectID": "gallery.html",
+    "href": "gallery.html",
+    "title": "Gallery",
+    "section": "",
+    "text": "GGplot with R\n\nggplot(iris) + aes(x=Sepal.Length, y=Petal.Length) + geom_point()\n\n\n\n\n\n\n\n\n\niris |&gt; head() |&gt; kable()\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa"
   },
   {
     "objectID": "index.html",
@@ -14,8 +21,8 @@
     "text": "Hey there! I started my journey as a physician but switched gears to dive headfirst into the exciting world of tech. Along the way, I’ve explored everything from health informatics to computational epidemiology and data science. With nearly two decades of experience under my belt, I’ve become quite the coding ninja. I’ve tinkered with Python for over a decade, danced with SQL for more than 15 years, and dabbled in R for 7. Linux? Been there, done that for 15+ years. I’m also fluent in containerization (think Docker and LXC), JavaScript, and PHP. Oh, and let’s not forget my love affair with machine learning and big data! Leading teams is my jam—I’ve rallied groups of up to 20 pros to tackle some seriously cool projects. Right now, I’m rocking it as a Senior Research Analyst, always hungry for the next data-driven adventure. Let’s connect and make some magic together!\nI am a husband, love music and play a little of the keyboards and bass guitar. I do some chess, but am definitely not a master. A huge Liverpool football club fan (YNWA!)."
   },
   {
-    "objectID": "index.html#profile",
-    "href": "index.html#profile",
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
     "title": "Sunday Ikpe",
     "section": "",
     "text": "Hey there! I started my journey as a physician but switched gears to dive headfirst into the exciting world of tech. Along the way, I’ve explored everything from health informatics to computational epidemiology and data science. With nearly two decades of experience under my belt, I’ve become quite the coding ninja. I’ve tinkered with Python for over a decade, danced with SQL for more than 15 years, and dabbled in R for 7. Linux? Been there, done that for 15+ years. I’m also fluent in containerization (think Docker and LXC), JavaScript, and PHP. Oh, and let’s not forget my love affair with machine learning and big data! Leading teams is my jam—I’ve rallied groups of up to 20 pros to tackle some seriously cool projects. Right now, I’m rocking it as a Senior Research Analyst, always hungry for the next data-driven adventure. Let’s connect and make some magic together!\nI am a husband, love music and play a little of the keyboards and bass guitar. I do some chess, but am definitely not a master. A huge Liverpool football club fan (YNWA!)."
@@ -26,5 +33,61 @@
     "title": "Sunday Ikpe",
     "section": "Tools/Skills",
     "text": "Tools/Skills\nPython | PHP | R | SAS | SQL | HTML | JavaScript | CSS | Biostatistics | Epidemiology | Bioinformatics | Machine Learning | Natural Language Processing | Time Series Analysis | Geospatial Analysis | Docker | LXC | Linux | GGPlot | Tableau | Shiny | PySpark\n:::"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Learning",
+    "section": "",
+    "text": "I teach datascience with python and R. While you do not need to know much to get into the trainig it may help to know enough math to carry out basic operations such as as addition, subtraction, multiplication and division (arithmetic), and what it means to say \\(x = 3\\) or \\(y = 4.5\\) (algebra). Having some excel skill can be helpful too but is not required."
+  },
+  {
+    "objectID": "about.html#curriculum",
+    "href": "about.html#curriculum",
+    "title": "Learning",
+    "section": "Curriculum",
+    "text": "Curriculum\n\nIntroduction\n\nIntroduction to the requirements\nTools\nWhy statistics\nWhy visualization\n\n\n\nStatistics\n\nTypes of variables\nData exploration\nSingle variable analysis (Univariate analysis)\nComparing two variables (Bivariate analysis)\nBasics of visualizing data\nHypothesis testing\n\nNull hypothesis/Alternative hypothesis\nType 1 and type 2 error\n\n\n\n\nPython or R\n\nData wrangling\nData primitives\nOperators\nControl Structure\nFunctions\n\nThese are expanded on below\n\n\nData wrangling with SQL\n\nBasics of querying relational databases\nSelecting all data\nSelecting specific variables (columns)\nAliasing variable (column) names\nFiltering with the WHERE clause\nArranging or sorting data with the ORDER BY clause\n\nReversing the sorting with the DESC clause\n\nRestricting amount of data retrieved with the LIMIT clause (or TOP)\nDeeper dive into filtering\n\nUnderstanging logic with AND and OR\nUsing parenthesis (...)\nFiltering from a set with IN\nPartial match with LIKE and the wildcard %\n\nCreating new variables (Columns)\n\nWith fixed values\nWith derrived values\n\nCase statements with CASE\nFunctions and the DISTINCT clause\nUnderstanding combining datasets\n\nVertical combinations with UNION and UNION ALL\nHorizontal combinations with joins - OUTER JOIN, INNER JOIN, LEFT JOIN, RIGHT JOIN and the ON statement\n\nAggregated data\n\nThe GROUP BY clause\nThe HAVING filter for aggregated data\n\nWindow functions\n\nUnderstanding the OVER, PARTITION BY syntax\nValue window functions - FIRST_VALUE, LAST_VALUE, LEAD, LAG\nRanking window functions - ROW_NUMBER, RANK, DENSE_RANK, NTILE, PERCENT_RANK, CUME_DIST\nAggregate window functions - MIN, MAX, COUNT, SUM, AVG\n\n\n\n\nData vizualization\n\nGGPlot2\n\nThe basic construct - ggplot() + aes() + geom_*()\n\nTableau\n\nImporting data and joining\nCreating worksheets with visualization\nCreating analytical variables\nCreating dashboards\nCreating stories\n\nShiny R\nShiny for Python"
+  },
+  {
+    "objectID": "about.html#python",
+    "href": "about.html#python",
+    "title": "Learning",
+    "section": "Python",
+    "text": "Python\n\nIntroduction and data types\n\nIntegers, floats, strings, booleans\nCollections - tuples, lists, dictionaries\n\n\n\nOperators\n\nThe assignment operator =\nMathematical operators +, -, *, /, %, **\nComparison operators ==, &gt;, &lt;, &gt;=, &lt;=, !, !=, in, not in, is, is not\nLogical operators and, or\nThe OOP (dot) operator .\n\n\n\nControl Strucutre - Logic\n\nUndestanging if, if-else, if-elif-else constructs\nTernary if statement\n\n\n\nControl Structure - Loops\n\nWhile loops\nFor loops\nComprehensions [item for item in items]\n\nMapping\nFiltering\n\n\n\n\nFunctions\n\nInbuilt functions\nUser defined functions\nUnderstanding arguments fn(*a, **kw)\nUnderstanding return\n\n\n\nStrings\n\nThe f-string\nStrings as objects\nWhat are methods\nString methods\nChaining methods\n\n\n\nCollections\n\nZero indexed collections - tuples, lists\nKey value pairs\nIndexing collections (and reverse indexing)\nSlicing collections\nMethods\n\n\n\nObject oriented programming\n\nClasses\nObjects\nThe constructor with the dunder init __init__()\nUnderstanding the soul of the object - self\nAttributes\nMethods\nInheritance\nPolymorphism\nEncapsulation\nDunder methods __repr__()\nDecorators - @property, @prop.setter\n\n\n\nModules\n\nSQLAlchemy\nRequests\nNumpy\nPandas\nSciPy\nStatsmodels"
+  },
+  {
+    "objectID": "about.html#r-programming",
+    "href": "about.html#r-programming",
+    "title": "Learning",
+    "section": "R-Programming",
+    "text": "R-Programming\n\nData types\n\nPrimitives\n\nScalers - numeric, character, logical\nVectors\nMatrices\nLists\nDataFrames\nIndexing\nSlicing\n\n\n\n\nOperators\n\nAssignment operators =, &lt;-, -&gt;\n\nNaming variables - numeric, character, dot, underscore\n\nMathematical operators +, -, *, /, %%, ^\nComparison operators ==, &gt;, &lt;, &gt;=, &lt;=, %in%, !\nLogical operators &, |\nOperator precedence\n\n\n\nControl Structure - Logic\n\nIf, if-else, if-else if-else\nternary ifelse(Logical, truth, alternative) function\n\n\n\nControl Structure - Loops\n\nWhile loops\nFor loops\n\n\n\nFunctions\n\nIn built functions\nUser defined functions\nUsing the function to create functions\n\n\n\nDataframes\n\nExtracting variables as vectors\n\nSyntax with df$vector\nUsing the with(df, vector) function\n\n\n\n\nPackages\n\nWhat are packages\nInstalling packages with install.packages('package')\nEnabling packages - library(pakage), or require(package)\n\n\n\nTidyverse\n\nThe pipe operators %&gt;% or |&gt;\nSelecting variables\nRenaming variables\nFiltering\nCreating new variables\nOrdering\nLimiting returned values\nAggregating\nJoining dataframes\nConverting data from long to wide and vice versa\nWindow functions\n\n\n\nAB Testing\n\nExploring data\nRegression analysis\n\nLinear regression\nLogistic regression\n\n\n\n\nGtsummary\n\nProducing tables for univariate summaries tbl_summary()\nProducing tabels for bivariate analysis tbl_summary(by=...)\nAdding p-values add_p()\nProducing regression tables tbl_regression(exponentiate=F)\nTweaking\n\nStatistical analysis\nVariable types\nMissingness\n\nCombining tables with tbl_stack(list(tbl1, tbl2), c('name1', 'name2')) or tbl_merge(list(tbl1, tbl2), c('name1', 'name2'))"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "A simple authentication and authorization system Built with Flask, SQLAlchemy, PyJWT, Waitress\n[Autheo]"
+  },
+  {
+    "objectID": "projects.html#autheo",
+    "href": "projects.html#autheo",
+    "title": "Projects",
+    "section": "",
+    "text": "A simple authentication and authorization system Built with Flask, SQLAlchemy, PyJWT, Waitress\n[Autheo]"
+  },
+  {
+    "objectID": "projects.html#ggplotviz",
+    "href": "projects.html#ggplotviz",
+    "title": "Projects",
+    "section": "GGPlotViz",
+    "text": "GGPlotViz\nA set of examples of visualization rules illustrated with ggplot.\n[GGPlotViz]"
+  },
+  {
+    "objectID": "projects.html#zedekframework",
+    "href": "projects.html#zedekframework",
+    "title": "Projects",
+    "section": "ZedekFramework",
+    "text": "ZedekFramework\nZedek Web Development Framework version 5 This is a PHP web development framework.\n[Zedek Framework]"
   }
 ]

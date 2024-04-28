@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>djynnius - Learning</title>
+<title>djynnius - MidJourney</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,35 +67,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -122,7 +93,7 @@ window.Quarto = {
 <span class="menu-text">Bio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
@@ -134,7 +105,7 @@ window.Quarto = {
 <span class="menu-text">Gallery</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./midjourney.html"> 
+    <a class="nav-link active" href="./midjourney.html" aria-current="page"> 
 <span class="menu-text">MidJourney</span></a>
   </li>  
 </ul>
@@ -153,39 +124,16 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#curriculum" id="toc-curriculum" class="nav-link active" data-scroll-target="#curriculum">Curriculum</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#statistics" id="toc-statistics" class="nav-link" data-scroll-target="#statistics">Statistics</a></li>
-  <li><a href="#python-or-r" id="toc-python-or-r" class="nav-link" data-scroll-target="#python-or-r">Python or R</a></li>
-  <li><a href="#data-wrangling-with-sql" id="toc-data-wrangling-with-sql" class="nav-link" data-scroll-target="#data-wrangling-with-sql">Data wrangling with SQL</a></li>
-  <li><a href="#data-vizualization" id="toc-data-vizualization" class="nav-link" data-scroll-target="#data-vizualization">Data vizualization</a></li>
-  </ul></li>
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a>
-  <ul class="collapse">
-  <li><a href="#introduction-and-data-types" id="toc-introduction-and-data-types" class="nav-link" data-scroll-target="#introduction-and-data-types">Introduction and data types</a></li>
-  <li><a href="#operators" id="toc-operators" class="nav-link" data-scroll-target="#operators">Operators</a></li>
-  <li><a href="#control-strucutre---logic" id="toc-control-strucutre---logic" class="nav-link" data-scroll-target="#control-strucutre---logic">Control Strucutre - Logic</a></li>
-  <li><a href="#control-structure---loops" id="toc-control-structure---loops" class="nav-link" data-scroll-target="#control-structure---loops">Control Structure - Loops</a></li>
-  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
-  <li><a href="#strings" id="toc-strings" class="nav-link" data-scroll-target="#strings">Strings</a></li>
-  <li><a href="#collections" id="toc-collections" class="nav-link" data-scroll-target="#collections">Collections</a></li>
-  <li><a href="#object-oriented-programming" id="toc-object-oriented-programming" class="nav-link" data-scroll-target="#object-oriented-programming">Object oriented programming</a></li>
-  <li><a href="#modules" id="toc-modules" class="nav-link" data-scroll-target="#modules">Modules</a></li>
-  </ul></li>
-  <li><a href="#r-programming" id="toc-r-programming" class="nav-link" data-scroll-target="#r-programming">R-Programming</a>
-  <ul class="collapse">
-  <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types">Data types</a></li>
-  <li><a href="#operators-1" id="toc-operators-1" class="nav-link" data-scroll-target="#operators-1">Operators</a></li>
-  <li><a href="#control-structure---logic" id="toc-control-structure---logic" class="nav-link" data-scroll-target="#control-structure---logic">Control Structure - Logic</a></li>
-  <li><a href="#control-structure---loops-1" id="toc-control-structure---loops-1" class="nav-link" data-scroll-target="#control-structure---loops-1">Control Structure - Loops</a></li>
-  <li><a href="#functions-1" id="toc-functions-1" class="nav-link" data-scroll-target="#functions-1">Functions</a></li>
-  <li><a href="#dataframes" id="toc-dataframes" class="nav-link" data-scroll-target="#dataframes">Dataframes</a></li>
-  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
-  <li><a href="#tidyverse" id="toc-tidyverse" class="nav-link" data-scroll-target="#tidyverse">Tidyverse</a></li>
-  <li><a href="#ab-testing" id="toc-ab-testing" class="nav-link" data-scroll-target="#ab-testing">AB Testing</a></li>
-  <li><a href="#gtsummary" id="toc-gtsummary" class="nav-link" data-scroll-target="#gtsummary">Gtsummary</a></li>
-  </ul></li>
+  <li><a href="#sydney-opera-house" id="toc-sydney-opera-house" class="nav-link active" data-scroll-target="#sydney-opera-house">Sydney Opera House</a></li>
+  <li><a href="#lions-in-sunset" id="toc-lions-in-sunset" class="nav-link" data-scroll-target="#lions-in-sunset">Lions in sunset</a></li>
+  <li><a href="#people" id="toc-people" class="nav-link" data-scroll-target="#people">People</a></li>
+  <li><a href="#d-graffitti" id="toc-d-graffitti" class="nav-link" data-scroll-target="#d-graffitti">3D Graffitti</a></li>
+  <li><a href="#street-dance" id="toc-street-dance" class="nav-link" data-scroll-target="#street-dance">Street dance</a></li>
+  <li><a href="#shekere" id="toc-shekere" class="nav-link" data-scroll-target="#shekere">Shekere</a></li>
+  <li><a href="#daughters-of-zelophehad" id="toc-daughters-of-zelophehad" class="nav-link" data-scroll-target="#daughters-of-zelophehad">Daughters of Zelophehad</a></li>
+  <li><a href="#emergence" id="toc-emergence" class="nav-link" data-scroll-target="#emergence">Emergence</a></li>
+  <li><a href="#multi-racial" id="toc-multi-racial" class="nav-link" data-scroll-target="#multi-racial">Multi Racial</a></li>
+  <li><a href="#futuristic-army" id="toc-futuristic-army" class="nav-link" data-scroll-target="#futuristic-army">Futuristic Army</a></li>
   </ul>
 </nav>
     </div>
@@ -194,7 +142,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Learning</h1>
+<h1 class="title">MidJourney</h1>
 </div>
 
 
@@ -211,320 +159,220 @@ window.Quarto = {
 </header>
 
 
-<p>I teach datascience with python and R. While you do not need to know much to get into the trainig it may help to know enough math to carry out basic operations such as as addition, subtraction, multiplication and division (arithmetic), and what it means to say <span class="math inline">\(x = 3\)</span> or <span class="math inline">\(y = 4.5\)</span> (algebra). Having some excel skill can be helpful too but is not required.</p>
-<section id="curriculum" class="level2">
-<h2 class="anchored" data-anchor-id="curriculum">Curriculum</h2>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<ul>
-<li>Introduction to the requirements</li>
-<li>Tools</li>
-<li>Why statistics</li>
-<li>Why visualization</li>
-</ul>
+<section id="sydney-opera-house" class="level3">
+<h3 class="anchored" data-anchor-id="sydney-opera-house">Sydney Opera House</h3>
+<p><img src="01.png" class="img-fluid"></p>
 </section>
-<section id="statistics" class="level3">
-<h3 class="anchored" data-anchor-id="statistics">Statistics</h3>
-<ul>
-<li>Types of variables</li>
-<li>Data exploration</li>
-<li>Single variable analysis (Univariate analysis)</li>
-<li>Comparing two variables (Bivariate analysis)</li>
-<li>Basics of visualizing data</li>
-<li>Hypothesis testing
-<ul>
-<li>Null hypothesis/Alternative hypothesis</li>
-<li>Type 1 and type 2 error</li>
-</ul></li>
-</ul>
+<section id="lions-in-sunset" class="level3">
+<h3 class="anchored" data-anchor-id="lions-in-sunset">Lions in sunset</h3>
+<p><img src="02.png" class="img-fluid"></p>
 </section>
-<section id="python-or-r" class="level3">
-<h3 class="anchored" data-anchor-id="python-or-r">Python or R</h3>
-<ul>
-<li>Data wrangling</li>
-<li>Data primitives</li>
-<li>Operators</li>
-<li>Control Structure</li>
-<li>Functions</li>
-</ul>
-<p>These are expanded on below</p>
+<section id="people" class="level3">
+<h3 class="anchored" data-anchor-id="people">People</h3>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-Polaroid" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Polaroid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03.png" id="fig-Polaroid" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-Polaroid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-Indian" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Indian-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04.png" id="fig-Indian" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-Indian-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-Eagle" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Eagle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="12.png" id="fig-Eagle" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-Eagle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-Dytopian" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Dytopian-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="13.png" id="fig-Dytopian" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-Dytopian-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-Corporate" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Corporate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="16.png" id="fig-Corporate" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-Corporate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="data-wrangling-with-sql" class="level3">
-<h3 class="anchored" data-anchor-id="data-wrangling-with-sql">Data wrangling with SQL</h3>
-<ul>
-<li>Basics of querying relational databases</li>
-<li>Selecting all data</li>
-<li>Selecting specific variables (columns)</li>
-<li>Aliasing variable (column) names</li>
-<li>Filtering with the <code>WHERE</code> clause</li>
-<li>Arranging or sorting data with the <code>ORDER BY</code> clause
-<ul>
-<li>Reversing the sorting with the <code>DESC</code> clause</li>
-</ul></li>
-<li>Restricting amount of data retrieved with the <code>LIMIT</code> clause (or <code>TOP</code>)</li>
-<li>Deeper dive into filtering
-<ul>
-<li>Understanging logic with <code>AND</code> and <code>OR</code></li>
-<li>Using parenthesis <code>(...)</code></li>
-<li>Filtering from a set with <code>IN</code></li>
-<li>Partial match with <code>LIKE</code> and the wildcard <code>%</code></li>
-</ul></li>
-<li>Creating new variables (Columns)
-<ul>
-<li>With fixed values</li>
-<li>With derrived values</li>
-</ul></li>
-<li>Case statements with <code>CASE</code></li>
-<li>Functions and the <code>DISTINCT</code> clause</li>
-<li>Understanding combining datasets
-<ul>
-<li>Vertical combinations with <code>UNION</code> and <code>UNION ALL</code></li>
-<li>Horizontal combinations with joins - <code>OUTER JOIN</code>, <code>INNER JOIN</code>, <code>LEFT JOIN</code>, <code>RIGHT JOIN</code> and the <code>ON</code> statement</li>
-</ul></li>
-<li>Aggregated data
-<ul>
-<li>The <code>GROUP BY</code> clause</li>
-<li>The <code>HAVING</code> filter for aggregated data</li>
-</ul></li>
-<li>Window functions
-<ul>
-<li>Understanding the <code>OVER</code>, <code>PARTITION BY</code> syntax</li>
-<li>Value window functions - <code>FIRST_VALUE</code>, <code>LAST_VALUE</code>, <code>LEAD</code>, <code>LAG</code></li>
-<li>Ranking window functions - <code>ROW_NUMBER</code>, <code>RANK</code>, <code>DENSE_RANK</code>, <code>NTILE</code>, <code>PERCENT_RANK</code>, <code>CUME_DIST</code></li>
-<li>Aggregate window functions - <code>MIN</code>, <code>MAX</code>, <code>COUNT</code>, <code>SUM</code>, <code>AVG</code></li>
-</ul></li>
-</ul>
+<section id="d-graffitti" class="level3">
+<h3 class="anchored" data-anchor-id="d-graffitti">3D Graffitti</h3>
+<p><img src="05.png" class="img-fluid"></p>
 </section>
-<section id="data-vizualization" class="level3">
-<h3 class="anchored" data-anchor-id="data-vizualization">Data vizualization</h3>
-<ul>
-<li>GGPlot2
-<ul>
-<li>The basic construct - <code>ggplot() + aes() + geom_*()</code></li>
-</ul></li>
-<li>Tableau
-<ul>
-<li>Importing data and joining</li>
-<li>Creating worksheets with visualization</li>
-<li>Creating analytical variables</li>
-<li>Creating dashboards</li>
-<li>Creating stories</li>
-</ul></li>
-<li>Shiny R</li>
-<li>Shiny for Python</li>
-</ul>
+<section id="street-dance" class="level3">
+<h3 class="anchored" data-anchor-id="street-dance">Street dance</h3>
+<p><img src="06.png" class="img-fluid"></p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-isaiah" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-isaiah-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="08.png" id="fig-isaiah" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-isaiah-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-donald" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-donald-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="09.png" id="fig-donald" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-donald-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
+<section id="shekere" class="level3">
+<h3 class="anchored" data-anchor-id="shekere">Shekere</h3>
+<p><img src="10.png" class="img-fluid"></p>
 </section>
-<section id="python" class="level2">
-<h2 class="anchored" data-anchor-id="python">Python</h2>
-<section id="introduction-and-data-types" class="level3">
-<h3 class="anchored" data-anchor-id="introduction-and-data-types">Introduction and data types</h3>
-<ul>
-<li>Integers, floats, strings, booleans</li>
-<li>Collections - tuples, lists, dictionaries</li>
-</ul>
+<section id="daughters-of-zelophehad" class="level3">
+<h3 class="anchored" data-anchor-id="daughters-of-zelophehad">Daughters of Zelophehad</h3>
+<p><img src="11.png" class="img-fluid"></p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-Praying" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Praying-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="14.png" id="fig-Praying" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-Praying-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-Worship" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Worship-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="15.png" id="fig-Worship" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-Worship-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="operators" class="level3">
-<h3 class="anchored" data-anchor-id="operators">Operators</h3>
-<ul>
-<li>The assignment operator <code>=</code></li>
-<li>Mathematical operators <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>**</code></li>
-<li>Comparison operators <code>==</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>!</code>, <code>!=</code>, <code>in</code>, <code>not in</code>, <code>is</code>, <code>is not</code></li>
-<li>Logical operators <code>and</code>, <code>or</code></li>
-<li>The OOP (dot) operator <code>.</code></li>
-</ul>
+<section id="emergence" class="level3">
+<h3 class="anchored" data-anchor-id="emergence">Emergence</h3>
+<p><img src="17.png" class="img-fluid"></p>
 </section>
-<section id="control-strucutre---logic" class="level3">
-<h3 class="anchored" data-anchor-id="control-strucutre---logic">Control Strucutre - Logic</h3>
-<ul>
-<li>Undestanging if, if-else, if-elif-else constructs</li>
-<li>Ternary <code>if</code> statement</li>
-</ul>
+<section id="multi-racial" class="level3">
+<h3 class="anchored" data-anchor-id="multi-racial">Multi Racial</h3>
+<p><img src="18.png" class="img-fluid"></p>
 </section>
-<section id="control-structure---loops" class="level3">
-<h3 class="anchored" data-anchor-id="control-structure---loops">Control Structure - Loops</h3>
-<ul>
-<li>While loops</li>
-<li>For loops</li>
-<li>Comprehensions <code>[item for item in items]</code>
-<ul>
-<li>Mapping</li>
-<li>Filtering</li>
-</ul></li>
-</ul>
-</section>
-<section id="functions" class="level3">
-<h3 class="anchored" data-anchor-id="functions">Functions</h3>
-<ul>
-<li>Inbuilt functions</li>
-<li>User defined functions</li>
-<li>Understanding arguments <code>fn(*a, **kw)</code></li>
-<li>Understanding <code>return</code></li>
-</ul>
-</section>
-<section id="strings" class="level3">
-<h3 class="anchored" data-anchor-id="strings">Strings</h3>
-<ul>
-<li>The f-string</li>
-<li>Strings as objects</li>
-<li>What are methods</li>
-<li>String methods</li>
-<li>Chaining methods</li>
-</ul>
-</section>
-<section id="collections" class="level3">
-<h3 class="anchored" data-anchor-id="collections">Collections</h3>
-<ul>
-<li>Zero indexed collections - tuples, lists</li>
-<li>Key value pairs</li>
-<li>Indexing collections (and reverse indexing)</li>
-<li>Slicing collections</li>
-<li>Methods</li>
-</ul>
-</section>
-<section id="object-oriented-programming" class="level3">
-<h3 class="anchored" data-anchor-id="object-oriented-programming">Object oriented programming</h3>
-<ul>
-<li>Classes</li>
-<li>Objects</li>
-<li>The constructor with the dunder init <code>__init__()</code></li>
-<li>Understanding the soul of the object - <code>self</code></li>
-<li>Attributes</li>
-<li>Methods</li>
-<li>Inheritance</li>
-<li>Polymorphism</li>
-<li>Encapsulation</li>
-<li>Dunder methods <code>__repr__()</code></li>
-<li>Decorators - <code>@property</code>, <code>@prop.setter</code></li>
-</ul>
-</section>
-<section id="modules" class="level3">
-<h3 class="anchored" data-anchor-id="modules">Modules</h3>
-<ul>
-<li>SQLAlchemy</li>
-<li>Requests</li>
-<li>Numpy</li>
-<li>Pandas</li>
-<li>SciPy</li>
-<li>Statsmodels</li>
-</ul>
-</section>
-</section>
-<section id="r-programming" class="level2">
-<h2 class="anchored" data-anchor-id="r-programming">R-Programming</h2>
-<section id="data-types" class="level3">
-<h3 class="anchored" data-anchor-id="data-types">Data types</h3>
-<ul>
-<li>Primitives
-<ul>
-<li>Scalers - numeric, character, logical</li>
-<li>Vectors</li>
-<li>Matrices</li>
-<li>Lists</li>
-<li>DataFrames</li>
-<li>Indexing</li>
-<li>Slicing</li>
-</ul></li>
-</ul>
-</section>
-<section id="operators-1" class="level3">
-<h3 class="anchored" data-anchor-id="operators-1">Operators</h3>
-<ul>
-<li>Assignment operators <code>=</code>, <code>&lt;-</code>, <code>-&gt;</code>
-<ul>
-<li>Naming variables - numeric, character, dot, underscore</li>
-</ul></li>
-<li>Mathematical operators <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%%</code>, <code>^</code></li>
-<li>Comparison operators <code>==</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>%in%</code>, <code>!</code></li>
-<li>Logical operators <code>&amp;</code>, <code>|</code></li>
-<li>Operator precedence</li>
-</ul>
-</section>
-<section id="control-structure---logic" class="level3">
-<h3 class="anchored" data-anchor-id="control-structure---logic">Control Structure - Logic</h3>
-<ul>
-<li>If, if-else, if-else if-else</li>
-<li>ternary <code>ifelse(Logical, truth, alternative)</code> function</li>
-</ul>
-</section>
-<section id="control-structure---loops-1" class="level3">
-<h3 class="anchored" data-anchor-id="control-structure---loops-1">Control Structure - Loops</h3>
-<ul>
-<li>While loops</li>
-<li>For loops</li>
-</ul>
-</section>
-<section id="functions-1" class="level3">
-<h3 class="anchored" data-anchor-id="functions-1">Functions</h3>
-<ul>
-<li>In built functions</li>
-<li>User defined functions</li>
-<li>Using the <code>function</code> to create functions</li>
-</ul>
-</section>
-<section id="dataframes" class="level3">
-<h3 class="anchored" data-anchor-id="dataframes">Dataframes</h3>
-<ul>
-<li>Extracting variables as vectors
-<ul>
-<li>Syntax with <code>df$vector</code></li>
-<li>Using the <code>with(df, vector)</code> function</li>
-</ul></li>
-</ul>
-</section>
-<section id="packages" class="level3">
-<h3 class="anchored" data-anchor-id="packages">Packages</h3>
-<ul>
-<li>What are packages</li>
-<li>Installing packages with <code>install.packages('package')</code></li>
-<li>Enabling packages - <code>library(pakage)</code>, or <code>require(package)</code></li>
-</ul>
-</section>
-<section id="tidyverse" class="level3">
-<h3 class="anchored" data-anchor-id="tidyverse">Tidyverse</h3>
-<ul>
-<li>The pipe operators <code>%&gt;%</code> or <code>|&gt;</code></li>
-<li>Selecting variables</li>
-<li>Renaming variables</li>
-<li>Filtering</li>
-<li>Creating new variables</li>
-<li>Ordering</li>
-<li>Limiting returned values</li>
-<li>Aggregating</li>
-<li>Joining dataframes</li>
-<li>Converting data from long to wide and vice versa</li>
-<li>Window functions</li>
-</ul>
-</section>
-<section id="ab-testing" class="level3">
-<h3 class="anchored" data-anchor-id="ab-testing">AB Testing</h3>
-<ul>
-<li>Exploring data</li>
-<li>Regression analysis
-<ul>
-<li>Linear regression</li>
-<li>Logistic regression</li>
-</ul></li>
-</ul>
-</section>
-<section id="gtsummary" class="level3">
-<h3 class="anchored" data-anchor-id="gtsummary">Gtsummary</h3>
-<ul>
-<li>Producing tables for univariate summaries <code>tbl_summary()</code></li>
-<li>Producing tabels for bivariate analysis <code>tbl_summary(by=...)</code></li>
-<li>Adding p-values <code>add_p()</code></li>
-<li>Producing regression tables <code>tbl_regression(exponentiate=F)</code></li>
-<li>Tweaking
-<ul>
-<li>Statistical analysis</li>
-<li>Variable types</li>
-<li>Missingness</li>
-</ul></li>
-<li>Combining tables with <code>tbl_stack(list(tbl1, tbl2), c('name1', 'name2'))</code> or <code>tbl_merge(list(tbl1, tbl2), c('name1', 'name2'))</code></li>
-</ul>
+<section id="futuristic-army" class="level3">
+<h3 class="anchored" data-anchor-id="futuristic-army">Futuristic Army</h3>
+<p><img src="20.png" class="img-fluid"></p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-BAT" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BAT-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="19.png" id="fig-BAT" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-BAT-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-Slum" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Slum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="21.png" id="fig-Slum" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-Slum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-Sith" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Sith-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="22.png" id="fig-Sith" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-Sith-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
