@@ -11,7 +11,35 @@
     "href": "gallery.html",
     "title": "Gallery",
     "section": "",
-    "text": "GGplot with R\n\nggplot(iris) + aes(x=Sepal.Length, y=Petal.Length) + geom_point()\n\n\n\n\n\n\n\n\n\niris |&gt; head() |&gt; kable()\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa"
+    "text": "flowchart TB\nA(variable) --&gt; B{Type}\nB --&gt; C[Numeric]\nB --&gt; D[Categorical]\nC --&gt; a[5 Number Summary]\na --&gt; E{Distribution}\nE --&gt; F[Normal]\nE --&gt; G[Not Normal]\nF --&gt; H[Center=Mean]\nF --&gt; I[Spread=SD]\nG --&gt; J[Center=Median]\nG --&gt; K[Spread=IQR]\nD --&gt; L[Frequency]\nD --&gt; M[Proportion]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nflowchart TB\nA(variable) --&gt; B{Type}\nB --&gt; C[Numeric]\nB --&gt; D[Categorical]\nC --&gt; a[Boxplot]\nD --&gt; L[Barchart]"
+  },
+  {
+    "objectID": "gallery.html#univariate-analysis",
+    "href": "gallery.html#univariate-analysis",
+    "title": "Gallery",
+    "section": "",
+    "text": "flowchart TB\nA(variable) --&gt; B{Type}\nB --&gt; C[Numeric]\nB --&gt; D[Categorical]\nC --&gt; a[5 Number Summary]\na --&gt; E{Distribution}\nE --&gt; F[Normal]\nE --&gt; G[Not Normal]\nF --&gt; H[Center=Mean]\nF --&gt; I[Spread=SD]\nG --&gt; J[Center=Median]\nG --&gt; K[Spread=IQR]\nD --&gt; L[Frequency]\nD --&gt; M[Proportion]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nflowchart TB\nA(variable) --&gt; B{Type}\nB --&gt; C[Numeric]\nB --&gt; D[Categorical]\nC --&gt; a[Boxplot]\nD --&gt; L[Barchart]"
+  },
+  {
+    "objectID": "gallery.html#bivariate-analysis",
+    "href": "gallery.html#bivariate-analysis",
+    "title": "Gallery",
+    "section": "Bivariate analysis",
+    "text": "Bivariate analysis\n\n\n\n\n\nflowchart TB\nA(Numeric vs Numeric) --&gt; B[Correlation]\nC(Numeric vs Categorical) --&gt; D\nE(Categorical vs Categorical) --&gt; F[Freqencies]\nE --&gt; S[Proportions]\nB --&gt; G[Scatterplot]\nG --&gt; M[Correlation test]\nD[Numeric] --&gt; I[Grouped Boxplots] \nI --&gt; N{Type}\nN --&gt; O[Binary]\nN --&gt; P[Non Binary]\nO --&gt; Q[T-test]\nP --&gt; R[ANOVA]\nF --&gt; K[Grouped Barcharts]\nS --&gt; K\nK --&gt; T[Chisquared test]"
+  },
+  {
+    "objectID": "gallery.html#special-considerations",
+    "href": "gallery.html#special-considerations",
+    "title": "Gallery",
+    "section": "Special considerations",
+    "text": "Special considerations\n\nNormal variables\n\nCenter = Mean\nSpread = Standard deviation\nPearsons Correlation\nvs Binary Categorical: T-test\nvs Non Binary Categorical: Analysis of variace (ANOVA)\n\n\n\nNon Normal Numeric variables\n\nCenter = Median\nSpread = Interquartile range (IQR)\nSpearman Correlation\nvs Binary Categorical: Wilcoxon test\nvs Non Binary Categorical: Kruskal Wallis test"
+  },
+  {
+    "objectID": "gallery.html#r-code",
+    "href": "gallery.html#r-code",
+    "title": "Gallery",
+    "section": "R Code",
+    "text": "R Code\n\niris |&gt; \n    ggplot() + \n    aes(x=Sepal.Length) + \n    geom_histogram(bins=30, color='white') + \n    labs(title='Distribution')\n\n\n\n\n\n\n\n\n\n# The results are the minimum, Q1, median, Q3, maximum\niris |&gt; summarise(\n    Minimum=min(Sepal.Length), \n    Q1 = quantile(Sepal.Length, 0.25),\n    Median = median(Sepal.Length),\n    Q3 = quantile(Sepal.Length, 0.75),\n    Maximum = max(Sepal.Length),\n    Mean = round(mean(Sepal.Length), 1),\n    Standard.Deviation = round(sd(Sepal.Length), 1),\n    IQR = IQR(Sepal.Length)\n) |&gt; kable()\n\n\n\n\nMinimum\nQ1\nMedian\nQ3\nMaximum\nMean\nStandard.Deviation\nIQR\n\n\n\n\n4.3\n5.1\n5.8\n6.4\n7.9\n5.8\n0.8\n1.3\n\n\n\n\n\n\niris |&gt; ggplot() + aes(x = Sepal.Length) + geom_boxplot()\n\n\n\n\n\n\n\n\n\niris |&gt;\n    group_by(Species) |&gt; \n    summarise(Frequencies = n()) |&gt; \n    mutate(Proportions = round(Frequencies/sum(Frequencies), 2)) |&gt; \n    kable()\n\n\n\n\nSpecies\nFrequencies\nProportions\n\n\n\n\nsetosa\n50\n0.33\n\n\nversicolor\n50\n0.33\n\n\nvirginica\n50\n0.33\n\n\n\n\n\n\niris |&gt; ggplot() + aes(x=Species) + geom_bar()\n\n\n\n\n\n\n\n\n\niris |&gt; with(cor(Sepal.Length, Petal.Length))\n\n[1] 0.8717538\n\n\n\niris |&gt; ggplot() + aes(x=Sepal.Length, y=Petal.Length) + geom_point()\n\n\n\n\n\n\n\n\n\niris |&gt; \n    group_by(Species) |&gt;\n    summarise(Median = median(Sepal.Length), IQR = IQR(Sepal.Length)) |&gt;\n    kable()\n\n\n\n\nSpecies\nMedian\nIQR\n\n\n\n\nsetosa\n5.0\n0.400\n\n\nversicolor\n5.9\n0.700\n\n\nvirginica\n6.5\n0.675\n\n\n\n\n\n\niris |&gt; ggplot() + aes(y=Sepal.Length, fill=Species) + geom_boxplot()"
   },
   {
     "objectID": "index.html",
