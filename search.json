@@ -112,10 +112,38 @@
     "text": "GGPlotViz\nA set of examples of visualization rules illustrated with ggplot.\n[GGPlotViz]"
   },
   {
+    "objectID": "projects.html#rocinante",
+    "href": "projects.html#rocinante",
+    "title": "Projects",
+    "section": "Rocinante",
+    "text": "Rocinante\nAn ironman suit for local models. A terminal coding agent that delegates to other models, with MCP, LSP, subagents, skills and living memory.\n[Rocinante]"
+  },
+  {
+    "objectID": "projects.html#ferraus",
+    "href": "projects.html#ferraus",
+    "title": "Projects",
+    "section": "Ferraus",
+    "text": "Ferraus\nA command-line audio workstation for scripts and AI agents.\n[Ferraus] [Website]"
+  },
+  {
+    "objectID": "projects.html#scopuli",
+    "href": "projects.html#scopuli",
+    "title": "Projects",
+    "section": "Scopuli",
+    "text": "Scopuli\nA static-HTML-site CMS with a visual editor, AI edits, and surge.sh publishing. Available on PyPI: pip install scopuli\n[Scopuli on PyPI] [GitHub]"
+  },
+  {
+    "objectID": "projects.html#corpustream",
+    "href": "projects.html#corpustream",
+    "title": "Projects",
+    "section": "corpuStream",
+    "text": "corpuStream\nA living body you can drive through: learn anatomy and physiology from the driver’s seat of a red blood cell.\n[corpuStream]"
+  },
+  {
     "objectID": "projects.html#zedekframework",
     "href": "projects.html#zedekframework",
     "title": "Projects",
     "section": "ZedekFramework",
-    "text": "ZedekFramework\nZedek Web Development Framework version 5 This is a PHP web development framework.\n[Zedek Framework]"
+    "text": "ZedekFramework\nZedek Web Development Framework version 6. A lightweight PHP MVC web development framework modernized for PHP 8.1+, with a built-in ORM (ZORM), Twig 3.x and native ZView templating, and clean URL routing with no routing files required.\n[Zedek Framework]"
   }
 ]
