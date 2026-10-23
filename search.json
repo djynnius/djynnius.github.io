@@ -75,5 +75,33 @@
     "title": "Projects",
     "section": "ZedekFramework",
     "text": "ZedekFramework\nZedek Web Development Framework version 6. A lightweight PHP MVC web development framework modernized for PHP 8.1+, with a built-in ORM (ZORM), Twig 3.x and native ZView templating, and clean URL routing with no routing files required.\n[Zedek Framework]"
+  },
+  {
+    "objectID": "videos.html#about-my-videos",
+    "href": "videos.html#about-my-videos",
+    "title": "Videos",
+    "section": "About My Videos",
+    "text": "About My Videos\nOn my YouTube channel I make AI music videos and short films, using tools like Suno for music, Higgsfield and Seedance for visuals, and Claude to tie the workflow together. Then I break down exactly how each one was made.\n Visit the channel"
+  },
+  {
+    "objectID": "videos.html#ai-music-videos",
+    "href": "videos.html#ai-music-videos",
+    "title": "Videos",
+    "section": "AI Music Videos & Films",
+    "text": "AI Music Videos & Films\nMusic videos and short films I've produced end to end with AI tools.\nI Love This Family | An NYSC Story (AI Music Video)\nSeun Rere | A Soldier's Journey Home (AI Music Video)\nD'banj – Fall in Love (Orchestral AI Remix) | Official Visualizer\nOctane movie trailer"
+  },
+  {
+    "objectID": "videos.html#behind-the-scenes",
+    "href": "videos.html#behind-the-scenes",
+    "title": "Videos",
+    "section": "Behind the Scenes",
+    "text": "Behind the Scenes\nHow I make them: the tools, prompts and workflow behind each video.\nHow I Actually Make AI Videos (My Full Stack & Workflow)\nHow I Made an NYSC Music Video with AI | The Making of “I Love This Family”\nHow I Made an AI Music Video From Scratch | The Making of Seun Rere\nHow I Made an AI Orchestral Music Video of D'banj's “Fall in Love” | Suno, Seedance & Claude"
+  },
+  {
+    "objectID": "videos.html#tech-reviews",
+    "href": "videos.html#tech-reviews",
+    "title": "Videos",
+    "section": "Tech Reviews",
+    "text": "Tech Reviews\nHands-on impressions of the gear I use day to day.\nGooglebook After Daily Use: Not There Yet"
   }
 ]
